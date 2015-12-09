@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace srCntrl
 {
     /// <summary>
@@ -88,9 +89,14 @@ namespace srCntrl
         /// <summary>
         /// Pull the remote updates into the local repository (only from origin not upstream)
         /// </summary>
-        private void PullChanges()
+        private void Pull()
         {
             Console.WriteLine(ExecuteCommand("pull " + remote));
+        }
+
+        public void Clone()
+        {
+            Console.WriteLine("No one taught me how... yet")
         }
 
         /// <summary>
