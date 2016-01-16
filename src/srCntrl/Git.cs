@@ -70,7 +70,7 @@ namespace srCntrl
         /// <summary>
         /// Make sure the local repository is on the correct branch. Assumes master will be used.
         /// </summary>
-        private void CheckoutBranch()
+        public void CheckoutBranch()
         {
             // Checkout the desired branch
             Console.WriteLine(ExecuteCommand("checkout " + branch));
@@ -81,7 +81,7 @@ namespace srCntrl
         /// <summary>
         /// Get the latest updates from the remote
         /// </summary>
-        private void UpdateRemote()
+        public void UpdateRemote()
         {
             Console.WriteLine(ExecuteCommand("remote update " + remote));
         }
@@ -89,7 +89,7 @@ namespace srCntrl
         /// <summary>
         /// Pull the remote updates into the local repository (only from origin not upstream)
         /// </summary>
-        private void Pull()
+        public void Pull()
         {
             Console.WriteLine(ExecuteCommand("pull " + remote));
         }
